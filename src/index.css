@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+@theme {
+  /* ============================================================
+     PALETA "LILÁS SPA DE LUXO" — Identidade Lilás & Rosa
+     60% Lilás Lavanda Pálido — base suave, luminosa, acolhedora
+     20% Branco Puro — seções alternadas, respiro visual
+     10% Roxo Berinjela — autoridade, títulos, CTAs, ícones
+     Acento: Dusty Rose — destaque delicado, bordas, ícones
+     Champagne — apenas estrelas de avaliação Google
+     TONS DESSATURADOS — luxo minimalista, zero neon.
+     ============================================================ */
+
+  /* Base — Lilás Lavanda Pálido (fundo dominante) + Branco Puro */
+  --color-cream: #F6F3F9;          /* lilás lavanda pálido — dominante */
+  --color-cream-deep: #EEEAF4;     /* lilás um toque mais profundo — layering */
+  --color-ink: #2D1B4E;            /* roxo berinjela profundo (texto principal) */
+  --color-ink-soft: #4A3662;       /* roxo médio (texto secundário) */
+  --color-mute: #8B7A9E;           /* lavanda acinzentado (texto terciário) */
+
+  /* Dusty Rose — acolhimento, delicadeza, acento rosa dessaturado */
+  --color-blush-50:  #FBF5F8;
+  --color-blush-100: #F3E3EA;
+  --color-blush-200: #E8CCD6;
+  --color-blush-300: #D4A8B5;
+  --color-blush-400: #C08B98;      /* dusty rose principal */
+  --color-blush-500: #A67280;      /* dusty rose profundo */
+
+  /* Sage → remapeado para Lavanda Suave (harmonia com lilás) */
+  --color-sage-100: #EDE8F4;
+  --color-sage-200: #DDD3EC;
+  --color-sage-300: #B8A5CE;
+  --color-sage-500: #6B4A8D;
+  --color-sage-700: #3D2263;
+
+  /* Teal → remapeado para Violeta/Roxo Profundo (cor de autoridade) */
+  --color-teal-50:  #F0EBF6;       /* violeta muito claro (fundo de badges) */
+  --color-teal-100: #E3D9F0;       /* violeta claro (bordas) */
+  --color-teal-200: #D0C0E4;       /* violeta médio (bordas hover) */
+  --color-teal-300: #9B80BB;       /* violeta (decorações, aspas) */
+  --color-teal-500: #5A3787;       /* violeta médio (accent secundário) */
+  --color-teal-700: #2D1B4E;       /* roxo berinjela — ACCENT PRINCIPAL */
+  --color-teal-800: #231341;
+  --color-teal-900: #180D2E;       /* roxo mais profundo (footer) */
+
+  /* Verde WhatsApp — único ponto vivo do site, exclusivo p/ CTA */
+  --color-whats: #25D366;
+  --color-whats-dark: #1EB858;
+
+  /* Champagne — APENAS estrelas de avaliação Google */
+  --color-champagne: #C9A876;
+  --color-champagne-dark: #A8895C;
+
+  --font-serif: "Cormorant Garamond", "Georgia", serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+  letter-spacing: -0.01em;
+}
+
+/* Animações */
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+.animate-float { animation: floatY 4s ease-in-out infinite; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up { animation: fadeUp 0.9s ease-out both; }
+
+@keyframes pulseRing {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+  70% { box-shadow: 0 0 0 18px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+.pulse-ring { animation: pulseRing 2.4s infinite; }
+
+/* Scroll utilities */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Foco acessível — roxo berinjela */
+:focus-visible {
+  outline: 2px solid var(--color-teal-500);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Logo tipográfico — divisor vertical sutil em violeta */
+.logo-divider {
+  display: inline-block;
+  width: 1px;
+  height: 28px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--color-teal-300) 20%,
+    var(--color-teal-300) 80%,
+    transparent
+  );
+  opacity: 0.5;
+}
