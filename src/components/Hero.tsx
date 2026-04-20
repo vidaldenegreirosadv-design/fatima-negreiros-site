@@ -92,4 +92,8 @@ export default function Hero() {
                 loading="eager"
                 fetchPriority="high"
               />
-            </div>      
+            </div>  
+                  </div> {/* Fecha a div max-w-7xl */}
+    </section> {/* Fecha a section */}
+  ); {/* Fecha o return */}
+} {/* Fecha a function Services */}
