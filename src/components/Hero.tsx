@@ -18,7 +18,6 @@ export default function Hero() {
       />
 
       <div className="relative max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-        {/* Coluna Esquerda - Texto */}
         <div className="lg:col-span-7 animate-fade-up">
           <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/60 border border-teal-100 text-[11px] tracking-[0.2em] uppercase text-teal-700 mb-8">
             <span className="w-1.5 h-1.5 rounded-full bg-blush-400" />
@@ -78,9 +77,9 @@ export default function Hero() {
               <span className="text-mute">Sem dor · Higiene rigorosa</span>
             </div>
           </div>
-        </div> {/* Fecha coluna esquerda */}
+        </div>
 
-        {/* Coluna Direita - Imagem */}
+        {/* Image card */}
         <div className="lg:col-span-5 relative">
           <div className="relative aspect-[4/5] max-w-md mx-auto">
             <div className="absolute inset-0 rounded-[2rem] bg-blush-200/50 -rotate-3" />
@@ -95,9 +94,8 @@ export default function Hero() {
               />
             </div>
           </div>
-        </div> {/* Fecha coluna direita */}
-
-      </div> {/* Fecha max-w-7xl */}
+        </div>
+      </div>
     </section>
   );
 }
