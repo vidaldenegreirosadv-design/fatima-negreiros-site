@@ -19,41 +19,41 @@ export default function Services() {
           </p>
         </div>
 
-        {/* Clínica */}
-        <div className="mb-24">
-          <div className="flex items-center gap-4 mb-10">
-            <div className="w-12 h-12 rounded-full bg-teal-700 flex items-center justify-center shadow-lg shadow-teal-700/20">
-              <ShieldIcon className="w-5 h-5 text-white" />
-            </div>
-            <div>
-              <span className="text-[11px] tracking-[0.22em] uppercase text-teal-500">
-                Categoria Clínica
-              </span>
-              <h3 className="font-serif text-2xl sm:text-3xl text-ink leading-tight">
-                Podologia Clínica
-              </h3>
-            </div>
-          </div>
+     {/* Clínica */}
+<div className="mb-24">
+  <div className="flex items-center gap-4 mb-10">
+    <div className="w-12 h-12 rounded-full bg-teal-700 flex items-center justify-center shadow-lg shadow-teal-700/20">
+      <ShieldIcon className="w-5 h-5 text-white" />
+    </div>
+    <div>
+      <span className="text-[11px] tracking-[0.22em] uppercase text-teal-500">
+        Categoria Clínica
+      </span>
+      <h3 className="font-serif text-2xl sm:text-3xl text-ink leading-tight">
+        Podologia Clínica
+      </h3>
+    </div>
+  </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {clinicalServices.map((s, i) => (
-              <article
-                key={s.title}
-                className="group bg-white rounded-2xl p-7 border border-teal-100/50 hover:border-teal-300/60 hover:shadow-xl hover:shadow-teal-700/8 hover:-translate-y-1 transition-all duration-300"
-              >
-                <div className="flex items-start justify-between mb-4">
-                  <span className="text-[10px] tracking-widest text-teal-500 font-mono">
-                    0{i + 1}
-                  </span>
-                  <LeafIcon className="w-4 h-4 text-teal-300 opacity-0 group-hover:opacity-100 transition-opacity" />
-                </div>
-                <h4 className="font-serif text-xl text-ink leading-snug group-hover:text-teal-700 transition-colors">
-                  {s.title}
-                </h4>
-                <p className="mt-3 text-sm text-ink-soft leading-relaxed">
-                  {s.desc}
-                </p>
-              </article>
-            ))}
-          </div>
+  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+    {clinicalServices.map((s, i) => (
+      <article
+        key={s.title}
+        className="group bg-white rounded-2xl p-7 border border-teal-100/50 hover:border-teal-300/60 hover:shadow-xl hover:shadow-teal-700/8 hover:-translate-y-1 transition-all duration-300"
+      >
+        <div className="flex items-start justify-between mb-4">
+          <span className="text-[10px] tracking-widest text-teal-500 font-mono">
+            0{i + 1}
+          </span>
+          <LeafIcon className="w-4 h-4 text-teal-300 opacity-0 group-hover:opacity-100 transition-opacity" />
         </div>
+        <h4 className="font-serif text-xl text-ink leading-snug group-hover:text-teal-700 transition-colors">
+          {s.title}
+        </h4>
+        <p className="mt-3 text-sm text-ink-soft leading-relaxed">
+          {s.desc}
+        </p>
+      </article>
+    ))}
+  </div>
+</div> {/* <--- ESTA TAG ESTAVA FALTANDO! */}
