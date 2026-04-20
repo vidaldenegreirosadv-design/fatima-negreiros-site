@@ -94,26 +94,4 @@ export default function Hero() {
               />
             </div>
 
-            {/* Floating card */}
-            <div className="absolute -bottom-6 -left-4 sm:-left-10 bg-white rounded-2xl shadow-xl shadow-teal-900/10 p-4 max-w-[230px] border border-teal-100/50 animate-float">
-              <div className="flex items-center gap-2 mb-1.5">
-                <div className="flex text-champagne">
-                  {[...Array(5)].map((_, i) => (
-                    <StarIcon key={i} className="w-3 h-3" />
-                  ))}
-                </div>
-                <span className="text-[10px] text-mute">Google</span>
-              </div>
-              <p className="font-serif text-sm text-ink italic leading-snug">
-                "Atendimento humanizado, desencravou a unha da minha bebê e ela nem chorou"
-              </p>
-              <span className="text-[10px] text-mute mt-1.5 block">
-                — Vanessa Brito
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
+        
