@@ -56,4 +56,9 @@ export default function Services() {
       </article>
     ))}
   </div>
-</div> {/* <--- ESTA TAG ESTAVA FALTANDO! */}
+</div>
+
+      </div> {/* Fecha a div max-w-7xl */}
+    </section> {/* Fecha a section */}
+  ); {/* Fecha o return */}
+} {/* Fecha a function Services */}
