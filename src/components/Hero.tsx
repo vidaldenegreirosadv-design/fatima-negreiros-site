@@ -21,7 +21,7 @@ export default function Hero() {
         <div className="lg:col-span-7 animate-fade-up">
           <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/60 border border-teal-100 text-[11px] tracking-[0.2em] uppercase text-teal-700 mb-8">
             <span className="w-1.5 h-1.5 rounded-full bg-blush-400" />
-            Podologia Clínica & Estética — {SITE.city}
+            Podologia Clínica — {SITE.city}
           </div>
 
           <h1 className="font-serif text-[2.6rem] sm:text-6xl lg:text-7xl leading-[1.02] text-ink">
@@ -92,6 +92,4 @@ export default function Hero() {
                 loading="eager"
                 fetchPriority="high"
               />
-            </div>
-
-        
+            </div>      
